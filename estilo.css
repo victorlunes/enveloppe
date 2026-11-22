@@ -1,0 +1,38 @@
+/* As cores do app (lib/ui/core/themes/colors.dart). Fontes do sistema: a página não carrega nada de fora. */
+:root {
+  --papel: #F3F0E9;
+  --cartao: #FFFFFF;
+  --tinta: #141312;
+  --suave: #6B665E;
+  --linha: #D3CEC3;
+  --sinal: #FF5B14;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --papel: #151413;
+    --cartao: #2A2724;
+    --tinta: #F1EDE6;
+    --suave: #A19B91;
+    --linha: #3B3732;
+    --sinal: #FF6A2B;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+main { max-width: 680px; margin: 0 auto; padding: 48px 20px 64px; }
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 32px; }
+header a { color: inherit; text-decoration: none; font-weight: 700; font-size: 20px; }
+.selo { width: 14px; height: 16px; background: var(--sinal); border-radius: 3px; transform: rotate(-6deg); }
+h1 { font-size: 34px; line-height: 1.15; margin: 0 0 8px; }
+h2 { font-size: 21px; margin: 36px 0 8px; }
+p, li { color: var(--tinta); }
+.suave, small { color: var(--suave); }
+a { color: var(--sinal); }
+.cartao { background: var(--cartao); border-radius: 18px; padding: 20px 22px; margin: 16px 0; }
+nav { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--linha); }
+ul { padding-left: 22px; }
